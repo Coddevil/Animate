@@ -18,7 +18,6 @@ body {
   padding: 30px 0;
 }
 
-/* Navigation */
 .nav {
   background: #fff;
   border-bottom: 3px solid #ff6600;
@@ -62,7 +61,6 @@ body {
   color: #ff6600;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -147,11 +145,11 @@ body {
 
 .profile-img {
   width: 100%;
-  max-width: 500px; /* ⬆ increased from 420px */
-  height: 500px; /* ⬆ increased for full visibility */
+  max-width: 500px;
+  height: 500px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: top center; /* shifts image slightly down to show head */
+  object-position: top center;
   position: relative;
   border: 6px solid transparent;
   background: linear-gradient(135deg, #ff6600, #ffcc80, #fff) border-box;
@@ -172,8 +170,6 @@ body {
   background: linear-gradient(135deg, #ff884d, #ffd699, #fff) border-box;
 }
 
-
-/* Panels */
 .panel {
   padding: 60px 0;
   background: #fff;
@@ -183,21 +179,20 @@ body {
   background: #f0f0f0;
 }
 
-/* Different color headings for each panel */
 .panel:nth-of-type(1) h2 {
-  color: #ff6600; /* About - Orange */
+  color: #ff6600;
 }
 
 .panel:nth-of-type(2) h2 {
-  color: #1a73e8; /* Skills - Blue */
+  color: #1a73e8;
 }
 
 .panel:nth-of-type(3) h2 {
-  color: #34a853; /* Projects - Green */
+  color: #34a853;
 }
 
 .panel:nth-of-type(4) h2 {
-  color: #e91e63; /* Contact - Pink */
+  color: #e91e63;
 }
 
 h2 {
@@ -239,7 +234,6 @@ ul li {
   margin-bottom: 8px;
 }
 
-/* Contact */
 form {
   display: flex;
   flex-direction: column;
@@ -280,7 +274,6 @@ form button:hover {
   text-decoration: underline;
 }
 
-/* Footer */
 footer {
   background: #fff;
   text-align: center;
@@ -290,7 +283,6 @@ footer {
   font-weight: bold;
 }
 
-/* Thank You Text */
 .thankyou {
   font-size: 40px;
   font-family: 'Times New Roman', serif;
@@ -300,7 +292,6 @@ footer {
   font-weight: bold;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hero {
     height: auto;
@@ -331,12 +322,11 @@ footer {
     justify-content: center;
   }
 }
-/* -------------------- SMOOTH SCROLL -------------------- */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* -------------------- HERO ANIMATIONS -------------------- */
 .hero {
   animation: fadeIn 1.5s ease-in-out;
 }
@@ -352,7 +342,6 @@ html {
   }
 }
 
-/* -------------------- NAVBAR SLIDE DOWN -------------------- */
 .nav {
   animation: slideDown 1s ease-in-out;
 }
@@ -368,7 +357,6 @@ html {
   }
 }
 
-/* -------------------- SECTION FADE + SLIDE -------------------- */
 .panel {
   animation: fadeSlide 1.2s ease-in-out;
 }
@@ -384,7 +372,6 @@ html {
   }
 }
 
-/* -------------------- BUTTON HOVER ANIMATION -------------------- */
 .hero-cta .btn {
   transition: all 0.3s ease-in-out;
 }
@@ -394,7 +381,6 @@ html {
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
 }
 
-/* -------------------- FOOTER THANK YOU PULSE -------------------- */
 .thankyou {
   animation: pulse 2s infinite alternate;
 }
