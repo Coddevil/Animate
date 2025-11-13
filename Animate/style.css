@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+/* Navigation */
+.nav {
+  background: #fff;
+  border-bottom: 3px solid #ff6600;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.brand h1 {
+  color: #ff6600;
+  font-size: 1.8rem;
+}
+
+.brand p {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6600;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(90deg, #ff6600 0%, #ff884d 100%);
+  color: #fff;
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.hero-left {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-left h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  color: #fff;
+  font-weight: bold;
+}
+
+.hero-cta .btn {
+  background: #fff;
+  color: #ff6600;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 6px;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-cta .btn:hover {
+  background: #ffe6d1;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+.hero-right {
+  flex: 1;
+  text-align: right;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 500px; /* ⬆ increased from 420px */
+  height: 500px; /* ⬆ increased for full visibility */
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center; /* shifts image slightly down to show head */
+  position: relative;
+  border: 6px solid transparent;
+  background: linear-gradient(135deg, #ff6600, #ffcc80, #fff) border-box;
+  box-shadow:
+    0 0 20px rgba(255, 102, 0, 0.3),
+    0 0 40px rgba(255, 102, 0, 0.2),
+    inset 0 0 12px rgba(255, 255, 255, 0.4);
+  padding: 6px;
+  transition: all 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 30px rgba(255, 102, 0, 0.6),
+    0 0 60px rgba(255, 140, 0, 0.4),
+    inset 0 0 14px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, #ff884d, #ffd699, #fff) border-box;
+}
+
+
+/* Panels */
+.panel {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.panel.pale {
+  background: #f0f0f0;
+}
+
+/* Different color headings for each panel */
+.panel:nth-of-type(1) h2 {
+  color: #ff6600; /* About - Orange */
+}
+
+.panel:nth-of-type(2) h2 {
+  color: #1a73e8; /* Skills - Blue */
+}
+
+.panel:nth-of-type(3) h2 {
+  color: #34a853; /* Projects - Green */
+}
+
+.panel:nth-of-type(4) h2 {
+  color: #e91e63; /* Contact - Pink */
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-list span {
+  background: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.project {
+  background: #fff;
+  border-left: 4px solid #ff6600;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+  color: #ff6600;
+  margin-bottom: 8px;
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+}
+
+form button {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #e05500;
+}
+
+.contact-links a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #fff;
+  text-align: center;
+  color: #222;
+  padding: 20px;
+  border-top: 3px solid #ff6600;
+  font-weight: bold;
+}
+
+/* Thank You Text */
+.thankyou {
+  font-size: 40px;
+  font-family: 'Times New Roman', serif;
+  color: #ff0000;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    padding: 0;
+  }
+
+  .hero-right {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .profile-img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* -------------------- SMOOTH SCROLL -------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------- HERO ANIMATIONS -------------------- */
+.hero {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* -------------------- NAVBAR SLIDE DOWN -------------------- */
+.nav {
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* -------------------- SECTION FADE + SLIDE -------------------- */
+.panel {
+  animation: fadeSlide 1.2s ease-in-out;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------- BUTTON HOVER ANIMATION -------------------- */
+.hero-cta .btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-cta .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
+}
+
+/* -------------------- FOOTER THANK YOU PULSE -------------------- */
+.thankyou {
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    text-shadow: 0 0 5px #ff0000;
+    color: #ff6666;
+  }
+  to {
+    text-shadow: 0 0 25px #ff0000;
+    color: #fff;
+  }
+}
